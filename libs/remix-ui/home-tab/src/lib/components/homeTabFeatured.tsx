@@ -7,10 +7,17 @@ import 'react-multi-carousel/lib/styles.css'
 import * as releaseDetails from './../../../../../../releaseDetails.json'
 
 const _paq = (window._paq = window._paq || []) // eslint-disable-line
+export type HomeTabFeaturedProps = {
+  plugin: any
+  }
 
-function HomeTabFeatured() {
+function HomeTabFeatured(props:HomeTabFeaturedProps) {
   const themeFilter = useContext(ThemeContext)
-
+  const handleStartLearneth = async () => {
+    await props.plugin.appManager.activatePlugin(['LearnEth', 'solidityUnitTesting'])
+    props.plugin.verticalIcons.select('LearnEth')
+    _paq.push(['trackEvent', 'hometab', 'featuredSection', 'LearnEth'])
+  }
   return (
     <div className="pt-1 pl-2" id="hTFeaturedeSection">
       <div className="mb-2 remix_ui-carousel-container">
@@ -63,29 +70,28 @@ function HomeTabFeatured() {
                 </div>
               </div>
               <div className="mr-1 pr-1 d-flex align-items-center justify-content-center h-100">
-                <a href="https://remix-project.org" target="__blank">
-                  <img src={'assets/img/bgRemi_small.webp'} className="remixui_carouselImage" alt=""></img>
-                </a>
+                <button className='btn' onClick={()=>handleStartLearneth()}>
+                  <img src={'assets/img/remi-prof.webp'} className="remixui_carouselImage" alt=""></img>
+                </button>
                 <div className="h6 w-50 p-2 pl-4  align-self-center" style={{ flex: '1' }}>
                   <h5>
-                    <FormattedMessage id="home.jumpIntoWeb3" />
+                    <FormattedMessage id="home.learnEthPromoTitle" />
                   </h5>
                   <div style={{ fontSize: '0.8rem', lineHeight: '1.25rem' }} className="mb-3">
-                    <FormattedMessage id="home.jumpIntoWeb3Text" />
+                    <FormattedMessage id="home.learnEthPromoText" />
                   </div>
-                  <a
+                  <span
                     className="remixui_home_text btn-sm btn-secondary mt-2 text-decoration-none mb-3"
-                    onClick={() => _paq.push(['trackEvent', 'hometab', 'featuredSection', 'jumpIntoWeb3'])}
-                    target="__blank"
-                    href="https://remix-project.org/"
+                    style={{ cursor: 'pointer' }}
+                    onClick={()=>handleStartLearneth()}
                   >
-                    <FormattedMessage id="home.jumpIntoWeb3More" />
-                  </a>
+                    <FormattedMessage id="home.learnEthPromoButton" />
+                  </span>
                 </div>
               </div>
               <div className="mr-1 pr-1 d-flex align-items-center justify-content-center h-100">
                 <a href="https://www.youtube.com/@EthereumRemix/videos" target="__blank">
-                  <img src={'/assets/img/YouTubeLogo.webp'} className="remixui_carouselImage" alt=""></img>
+                  <img src={'assets/img/YouTubeLogo.webp'} className="remixui_carouselImage" alt=""></img>
                 </a>
                 <div className="h6 w-50 p-2 pl-4  align-self-center" style={{ flex: '1' }}>
                   <h5>
@@ -109,7 +115,7 @@ function HomeTabFeatured() {
               </div>
               <div className="mr-1 pr-1 d-flex align-items-center justify-content-center h-100">
                 <a href="https://docs.google.com/forms/d/e/1FAIpQLSd0WsJnKbeJo-BGrnf7WijxAdmE4PnC_Z4M0IApbBfHLHZdsQ/viewform" target="__blank">
-                  <img src={'/assets/img/remixRewardBetaTester_small.webp'} className="remixui_carouselImage_remixbeta" alt=""></img>
+                  <img src={'assets/img/remixRewardBetaTester_small.webp'} className="remixui_carouselImage_remixbeta" alt=""></img>
                 </a>
                 <div className="h6 w-50 p-2 pl-4  align-self-center" style={{ flex: '1' }}>
                   <h5>

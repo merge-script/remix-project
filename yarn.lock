@@ -2835,10 +2835,10 @@
     bigint-crypto-utils "^3.2.2"
     ethereum-cryptography "^2.2.1"
 
-"@ethereumjs/evm@3.1.0", "@ethereumjs/evm@^3.1.0":
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/@ethereumjs/evm/-/evm-3.1.0.tgz#d036a7986d2a4914a82324ee4fbc2ae7a503e515"
-  integrity sha512-m6L8wPDpNDqCBeiCQDwoKtKMcFjcvctuZs6XHaVnFocMwsAsN9Wg89nAT7Gs6ic2kDUgVGhtGTvEAaH51B70ew==
+"@ethereumjs/evm@3.1.1", "@ethereumjs/evm@^3.1.1":
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/@ethereumjs/evm/-/evm-3.1.1.tgz#f593ea99e564ba6d916d81a833bb9af5713caf34"
+  integrity sha512-JbDXtIn0PPZFU2oqVngje0YvW/JuNa6Y+kIYp1MCh5pn9NRplR8FkBbvb991fVSSo6AzuFMHJxSwgVl+OksnvQ==
   dependencies:
     "@ethereumjs/common" "^4.4.0"
     "@ethereumjs/statemanager" "^2.4.0"
@@ -2914,15 +2914,15 @@
     ethereum-cryptography "^2.0.0"
     micro-ftch "^0.3.1"
 
-"@ethereumjs/vm@8.1.0":
-  version "8.1.0"
-  resolved "https://registry.yarnpkg.com/@ethereumjs/vm/-/vm-8.1.0.tgz#9f795a7802b0ccdedd4ca45193a3895eafe51ef9"
-  integrity sha512-CjQ57Kl2JYMyX8UNUW2aWFWJnb7M5a8gUEtBMZ+A3K+wNNTALVPOKx9eNCiSwBn1bijB05FyvcNMnHEDwqSuiA==
+"@ethereumjs/vm@8.1.1":
+  version "8.1.1"
+  resolved "https://registry.yarnpkg.com/@ethereumjs/vm/-/vm-8.1.1.tgz#6b58f298ee6f665d4ac412cd0d3351bb9c0ceea3"
+  integrity sha512-h9gIN/maMKXltM4VxZ9ac581PPUUObnFVBniLuu9vJgGTELdnwqxLwJVxSfho/Bhk56YyvKBYf1RpHwoLZZ6xw==
   dependencies:
     "@ethereumjs/block" "^5.3.0"
     "@ethereumjs/blockchain" "^7.3.0"
     "@ethereumjs/common" "^4.4.0"
-    "@ethereumjs/evm" "^3.1.0"
+    "@ethereumjs/evm" "^3.1.1"
     "@ethereumjs/rlp" "^5.0.2"
     "@ethereumjs/statemanager" "^2.4.0"
     "@ethereumjs/trie" "^6.2.1"
@@ -7602,11 +7602,6 @@
   integrity sha512-nekiGu2NDb1BcVofVcEKMIwzlx4NjHlcjhoxxKBNLtz15Y1z7MYf549DFvkHSId02Ax6kGwWntIBPC3l/JZcmw==
   dependencies:
     undici-types "~5.26.4"
-
-"@types/node@^18.11.18":
-  version "18.16.16"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.16.16.tgz#3b64862856c7874ccf7439e6bab872d245c86d8e"
-  integrity sha512-NpaM49IGQQAUlBhHMF82QH80J08os4ZmyF9MkpCzWAGuOHqE4gTEbhzd7L3l5LmWuZ6E0OiC1FweQ4tsiW35+g==
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.1"
@@ -14030,9 +14025,9 @@ domhandler@^4.2.0:
     domelementtype "^2.2.0"
 
 dompurify@^2.2.0:
-  version "2.4.1"
-  resolved "https://registry.yarnpkg.com/dompurify/-/dompurify-2.4.1.tgz#f9cb1a275fde9af6f2d0a2644ef648dd6847b631"
-  integrity sha512-ewwFzHzrrneRjxzmK6oVz/rZn9VWspGFRDb4/rRtIsM1n36t9AKma/ye8syCpcw+XJ25kOK/hOG7t1j2I2yBqA==
+  version "2.5.6"
+  resolved "https://registry.yarnpkg.com/dompurify/-/dompurify-2.5.6.tgz#8402b501611eaa7fb3786072297fcbe2787f8592"
+  integrity sha512-zUTaUBO8pY4+iJMPE1B9XlO2tXVYIcEA4SNGtvDELzTSCQO7RzH+j7S180BmhmJId78lqGU2z19vgVx2Sxs/PQ==
 
 domutils@^2.6.0:
   version "2.8.0"
@@ -14104,9 +14099,9 @@ dotignore@~0.1.2:
     minimatch "^3.0.4"
 
 dset@^3.1.2:
-  version "3.1.3"
-  resolved "https://registry.yarnpkg.com/dset/-/dset-3.1.3.tgz#c194147f159841148e8e34ca41f638556d9542d2"
-  integrity sha512-20TuZZHCEZ2O71q9/+8BwKwZ0QtD9D8ObhrihJPr+vLLYlSuAU3/zL4cSlgbfeoGHTjCSJBa7NGcrF9/Bx/WJQ==
+  version "3.1.4"
+  resolved "https://registry.yarnpkg.com/dset/-/dset-3.1.4.tgz#f8eaf5f023f068a036d08cd07dc9ffb7d0065248"
+  integrity sha512-2QF/g9/zTaPDc3BjNcVTGoBbXBgYfMTTceLaYcFJ/W9kggFUkhxD/hMEeuLKbugyef9SqAx8cpgwlIP/jinUTA==
 
 duplexer2@^0.1.2, duplexer2@~0.1.0, duplexer2@~0.1.2:
   version "0.1.4"
@@ -14251,15 +14246,6 @@ electron-to-chromium@^1.5.4:
   version "1.5.13"
   resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.13.tgz#1abf0410c5344b2b829b7247e031f02810d442e6"
   integrity sha512-lbBcvtIJ4J6sS4tb5TLp1b4LyfCdMkwStzXPyAgVgTRAsep4bvrAGaBOP7ZJtQMNJpSQ9SqG4brWOroNaQtm7Q==
-
-electron@^24.4.0:
-  version "24.4.0"
-  resolved "https://registry.yarnpkg.com/electron/-/electron-24.4.0.tgz#48d05561dab6a5835ec1a3a96852797f69824eea"
-  integrity sha512-A9YzLHRUA+HfYVf2daNv0jPXNCWShgcgcTaGntrZRGynQLEhDTbti9Lfmq2tjRKoEgXZ7qj+aJFw+tJZsT/Cfw==
-  dependencies:
-    "@electron/get" "^2.0.0"
-    "@types/node" "^18.11.18"
-    extract-zip "^2.0.1"
 
 elliptic@6.5.4, elliptic@^6.5.2, elliptic@^6.5.3, elliptic@^6.5.4:
   version "6.5.4"
@@ -15552,7 +15538,7 @@ extract-files@^11.0.0:
   resolved "https://registry.yarnpkg.com/extract-files/-/extract-files-11.0.0.tgz#b72d428712f787eef1f5193aff8ab5351ca8469a"
   integrity sha512-FuoE1qtbJ4bBVvv94CC7s0oTnKUGvQs+Rjf1L2SJFfS+HTVVjhPFtehPdQ0JiGPqVNfSSZvL5yzHHQq2Z4WNhQ==
 
-extract-zip@2.0.1, extract-zip@^2.0.0, extract-zip@^2.0.1:
+extract-zip@2.0.1, extract-zip@^2.0.0:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/extract-zip/-/extract-zip-2.0.1.tgz#663dca56fe46df890d5f131ef4a06d22bb8ba13a"
   integrity sha512-GDhU9ntwuKyGXdZBUgTIe+vXnWj0fppUEtMDL0+idd5Sta8TGpHssn/eusA9mrPr9qNDym6SxAYZjNvCn/9RBg==
