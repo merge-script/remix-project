@@ -43,6 +43,35 @@ self.onmessage = (e: MessageEvent) => {
 
     break
   }
+  case 'request':
+  {
+    if (provider) {
+      provider.request(data.query).then((result) => {
+        self.postMessage({
+          cmd: 'requestResult',
+          error: null,
+          result: result,
+          stamp: data.stamp
+        })
+      }).catch((error) => {
+        self.postMessage({
+          cmd: 'requestResult',
+          error: error,
+          result: null,
+          stamp: data.stamp
+        })
+      })
+    } else {
+      self.postMessage({
+        cmd: 'requestResult',
+        error: 'Provider not instantiated',
+        result: null,
+        stamp: data.stamp
+      })
+    }
+
+    break
+  }
   case 'addAccount':
   {
     if (provider) {

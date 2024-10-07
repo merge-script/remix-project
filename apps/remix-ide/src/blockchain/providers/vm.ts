@@ -38,18 +38,16 @@ export class VMProvider {
 
     return new Promise((resolve, reject) => {
       this.worker.addEventListener('message', (msg) => {
-        if (msg.data.cmd === 'sendAsyncResult' && stamps[msg.data.stamp]) {
-          const result = msg.data.result
-          // if (stamps[msg.data.stamp].request && msg.data.result) result = msg.data.result.result
-
-          if (stamps[msg.data.stamp].callback) {
-            stamps[msg.data.stamp].callback(msg.data.error, result)
-            return
-          }
+        if (msg.data.cmd === 'requestResult' && stamps[msg.data.stamp]) {
           if (msg.data.error) {
             stamps[msg.data.stamp].reject(msg.data.error)
           } else {
-            stamps[msg.data.stamp].resolve(result)
+            stamps[msg.data.stamp].resolve(msg.data.result)
+          }
+        } else  if (msg.data.cmd === 'sendAsyncResult' && stamps[msg.data.stamp]) {
+          if (stamps[msg.data.stamp].callback) {
+            stamps[msg.data.stamp].callback(msg.data.error, msg.data.result)
+            return
           }
         } else if (msg.data.cmd === 'initiateResult') {
           if (!msg.data.error) {
@@ -58,7 +56,7 @@ export class VMProvider {
                 return new Promise((resolve, reject) => {
                   const stamp = Date.now() + incr
                   incr++
-                  stamps[stamp] = { callback, resolve, reject, sendAsync: true }
+                  stamps[stamp] = { callback, resolve, reject }
                   this.worker.postMessage({ cmd: 'sendAsync', query, stamp })
                 })
               },
@@ -66,8 +64,8 @@ export class VMProvider {
                 return new Promise((resolve, reject) => {
                   const stamp = Date.now() + incr
                   incr++
-                  stamps[stamp] = { resolve, reject, request: true }
-                  this.worker.postMessage({ cmd: 'sendAsync', query, stamp })
+                  stamps[stamp] = { resolve, reject }
+                  this.worker.postMessage({ cmd: 'request', query, stamp })
                 })
               }
             }
